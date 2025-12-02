@@ -189,3 +189,54 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ------------------ ANIMAÇÕES GERAIS ------------------ */
+
+/* Fade + slide para elementos que aparecem com scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.9s ease-out;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animação 3D nos cards */
+.project-card {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+}
+
+.project-card:hover {
+    transform: translateY(-10px) rotateX(6deg) rotateY(6deg) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+/* Botões animados */
+.btn, button, a.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover, button:hover, a.btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* Efeito "float" (flutuar suavemente) */
+.float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+    100% { transform: translateY(0); }
+}
+
+/* Transição suave ao trocar tema */
+body, body * {
+    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+}
