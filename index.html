@@ -1,133 +1,146 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfólio - Erick Sugiyama</title>
     <link rel="stylesheet" href="style.css" />
-
-    <!-- Ícones -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-
-    <style>
-        /* -------------------------------------
-           ANIMAÇÃO ADICIONADA (versão "C")
-        ---------------------------------------*/
-        .slide-up {
-            opacity: 0;
-            transform: translateY(40px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-
-        .slide-up.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    </style>
 </head>
 <body>
 
-    <!-- Botão de troca de tema -->
-    <button id="theme-toggle" class="theme-toggle">
-        <i data-lucide="moon"></i>
-    </button>
+    <!-- ======= TOPO FIXO ======= -->
+    <header class="navbar">
+        <h1 class="logo" data-lang="logo">Portifólio Profissional</h1>
 
-    <header class="hero slide-up">
-        <h1 data-lang="title">Olá, eu sou Erick Sugiyama</h1>
-        <p data-lang="subtitle">Cientista de Dados • Desenvolvedor • Criador de Soluções Inteligentes</p>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#sobre" data-lang="menuSobre">Sobre</a></li>
+                <li><a href="#skills" data-lang="menuSkills">Skills</a></li>
+                <li><a href="#projetos" data-lang="menuProjetos">Projetos</a></li>
+                <li><a href="#contato" data-lang="menuContato">Contato</a></li>
+            </ul>
+        </nav>
+
+        <div class="controls">
+            <button id="themeToggle">🌙</button>
+            <select id="languageSwitch">
+                <option value="pt">PT</option>
+                <option value="en">EN</option>
+            </select>
+        </div>
     </header>
 
-    <nav class="slide-up">
-        <ul>
-            <li><a href="#sobre" data-lang="nav-about">Sobre</a></li>
-            <li><a href="#projetos" data-lang="nav-projects">Projetos</a></li>
-            <li><a href="#contato" data-lang="nav-contact">Contato</a></li>
-        </ul>
-    </nav>
-
-    <section id="sobre" class="slide-up">
-        <h2 data-lang="about-title">Sobre mim</h2>
-        <p data-lang="about-text">
-            Sou um apaixonado por tecnologia, dados e soluções inteligentes. Trabalho com Python,
-            SQL, Machine Learning, Web Development e criação de dashboards interativos.
-        </p>
-    </section>
-
-    <section id="projetos" class="slide-up">
-        <h2 data-lang="projects-title">Projetos</h2>
-
-        <div class="projeto-card slide-up">
-            <h3>Projeto Exemplo</h3>
-            <p data-lang="project-example">
-                Modelo de previsão usando Machine Learning, incluindo ETL, análise exploratória e visualizações.
-            </p>
-        </div>
-
-        <div class="projeto-card slide-up">
-            <h3>Outro Projeto</h3>
-            <p data-lang="project-example-2">
-                Dashboard interativo criado com Streamlit, usando dados reais do mercado.
-            </p>
+    <!-- ======= HERO ======= -->
+    <section class="hero fade-in">
+        <div class="hero-text">
+            <h2 data-lang="heroTitle">Olá! Eu sou <span>Erick Sugiyama</span></h2>
+            <p data-lang="heroSubtitle">Desenvolvedor • Cientista de Dados • Criador de Projetos</p>
+            <a class="btn" href="#projetos" data-lang="heroBtn">Ver Projetos</a>
         </div>
     </section>
 
-    <section id="contato" class="slide-up">
-        <h2 data-lang="contact-title">Contato</h2>
-
-        <p>
-            <strong data-lang="linkedin">LinkedIn:</strong>
-            <a href="https://www.linkedin.com/in/erick-sugiyama/" target="_blank">
-                https://www.linkedin.com/in/erick-sugiyama/
-            </a>
+    <!-- ======= SOBRE ======= -->
+    <section id="sobre" class="section fade-in">
+        <h2 class="section-title" data-lang="sobreTitulo">Sobre Mim</h2>
+        <p data-lang="sobreTexto">
+            Sou estudante de Ciência de Dados no CEDUP e atuo na criação de dashboards,
+            websites, modelos de machine learning, aplicativos e análises de dados.
+            Apaixonado por tecnologia, inovação e resolução de problemas reais.
         </p>
-
-        <p><strong>Email:</strong> sugiyamaerick07@gmail.com</p>
     </section>
 
-    <footer class="slide-up">
-        <p>&copy; 2025 Erick Sugiyama</p>
+    <!-- ======= SKILLS ======= -->
+    <section id="skills" class="section fade-in">
+        <h2 class="section-title" data-lang="skillsTitulo">Habilidades</h2>
+
+        <div class="skills-container slide-up">
+
+            <div class="skill-card">
+                <h3 data-lang="skillsHard">Hard Skills</h3>
+                <ul>
+                    <li>Python, SQL</li>
+                    <li>HTML, CSS, JavaScript</li>
+                    <li>Machine Learning</li>
+                    <li>Power BI, Excel</li>
+                    <li>APIs e Web Scraping</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h3 data-lang="skillsSoft">Soft Skills</h3>
+                <ul>
+                    <li>Comunicação</li>
+                    <li>Trabalho em equipe</li>
+                    <li>Proatividade</li>
+                    <li>Pensamento crítico</li>
+                    <li>Gestão de tempo</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======= PROJETOS ======= -->
+    <section id="projetos" class="section fade-in">
+        <h2 class="section-title" data-lang="projetosTitulo">Projetos</h2>
+
+        <div class="projects-container">
+
+            <div class="project-card hover-grow">
+                <h3>Previsão de Preços – Walmart</h3>
+                <p data-lang="proj1">
+                    Modelo ARIMA e LSTM para previsão de preços futuros.
+                </p>
+                <a href="#" target="_blank" data-lang="projVer">Ver Projeto</a>
+            </div>
+
+            <div class="project-card hover-grow">
+                <h3>Análise de Dados – Saúde</h3>
+                <p data-lang="proj2">
+                    EDA e regressão linear para prever despesas médicas.
+                </p>
+                <a href="#" target="_blank" data-lang="projVer">Ver Projeto</a>
+            </div>
+
+            <div class="project-card hover-grow">
+                <h3>Classificação NLP</h3>
+                <p data-lang="proj3">
+                    Classificação de textos usando Naive Bayes.
+                </p>
+                <a href="#" target="_blank" data-lang="projVer">Ver Projeto</a>
+            </div>
+
+            <div class="project-card hover-grow">
+                <h3>Dashboard – Clima</h3>
+                <p data-lang="proj4">
+                    Dashboard com API Open-Meteo.
+                </p>
+                <a href="#" target="_blank" data-lang="projVer">Ver Projeto</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ======= CONTATO ======= -->
+    <section id="contato" class="section fade-in">
+        <h2 class="section-title" data-lang="contatoTitulo">Contato</h2>
+
+        <div class="contato-box slide-up">
+            <p><strong>Email:</strong> sugiyamaerick07@gmail.com</p>
+            <p>
+    <strong data-lang="linkedin">LinkedIn:</strong>
+    <a href="https://www.linkedin.com/in/erick-sugiyama/" target="_blank" rel="noopener noreferrer">
+        https://www.linkedin.com/in/erick-sugiyama/
+    </a>
+</p>
+
+            <p><strong data-lang="telefone">Telefone:</strong> (11) 91424-1614</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Erick Sugiyama</p>
     </footer>
 
-    <!-- JS DE ANIMAÇÃO -->
-    <script>
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        }, { threshold: 0.2 });
-
-        document.querySelectorAll(".slide-up").forEach(el => observer.observe(el));
-    </script>
-
-    <!-- JS DO TEMA (Mantém lua/sol) -->
-    <script>
-        const themeButton = document.getElementById("theme-toggle");
-        const icon = themeButton.querySelector("i");
-
-        function applyTheme(theme) {
-            document.body.setAttribute("data-theme", theme);
-            icon.setAttribute("data-lucide", theme === "dark" ? "moon" : "sun");
-            lucide.createIcons();
-        }
-
-        const savedTheme = localStorage.getItem("theme") || "dark";
-        applyTheme(savedTheme);
-
-        themeButton.addEventListener("click", () => {
-            const newTheme = document.body.getAttribute("data-theme") === "dark" ? "light" : "dark";
-            applyTheme(newTheme);
-            localStorage.setItem("theme", newTheme);
-        });
-    </script>
-
-    <!-- JS DE IDIOMA -->
-    <script src="lang.js"></script>
-
-    <script>
-        lucide.createIcons();
-    </script>
-
+    <script src="script.js"></script>
 </body>
 </html>
