@@ -71,7 +71,7 @@ const translations = {
         heroBtn: "Ver Projetos",
         sobreTitulo: "Sobre Mim",
         sobreTexto:
-            "Sou estudante de Ciência de Dados no CEDUP e atuo na criação de dashboards, websites, modelos de machine learning e análises de dados.",
+            "Sou técnico em Ciência de Dados, formado no CEDUP, com um curso de 2 anos de duração. Atuo na criação de dashboards, websites, modelos de machine learning, aplicativos e análises de dados. Já desenvolvi diversos projetos fictícios e reais acerca do assunto. Possuo alto domínio do uso de inteligências artíficiais, sabendo como utilizar de forma rápida e otimizada os prompts mais adequados.",
         skillsTitulo: "Habilidades",
         skillsHard: "Hard Skills",
         skillsSoft: "Soft Skills",
@@ -101,7 +101,7 @@ const translations = {
         heroBtn: "View Projects",
         sobreTitulo: "About Me",
         sobreTexto:
-            "I am a Data Science student working with dashboards, websites, machine learning models and data analysis.",
+            "I am a Data Science Technician, graduated from CEDUP, with a 2-year course. I work in the creation of dashboards, websites, machine learning models, applications and data analysis. I have developed several fictional and real projects on the subject. I have a high level of expertise in the use of artificial intelligence, knowing how to quickly and efficiently use the most appropriate prompts.",
         skillsTitulo: "Skills",
         skillsHard: "Hard Skills",
         skillsSoft: "Soft Skills",
